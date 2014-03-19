@@ -63,4 +63,5 @@
 	<string name="saved_amount">Tiết kiệm</string>
 	<string name="remaining">Điểm còn lại</string>
 	<string name="redeemed">Điểm đã quy đổi</string>
+	<string name="not_connect">Currently! Your device is not connect internet. Please check it in Setting</string>
 </resources>
