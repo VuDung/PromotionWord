@@ -42,7 +42,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class LoginHomeActivity extends SherlockActivity implements OnClickListener {
-	private TGUDApplication tgudApplication;
+//	private TGUDApplication tgudApplication;
 	private final String TAG = "LoginHomeActivity";
 	private EditText txtNumberCardEmail;
 	private EditText txtDateOfBirth;
@@ -62,7 +62,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_home);
         mActivity = this;
-        tgudApplication = (TGUDApplication)mActivity.getApplication();
+//        tgudApplication = (TGUDApplication)mActivity.getApplication();
         // set font type for this activity
         final Typeface mFont = Typeface.createFromAsset(mActivity.getAssets(), "SFUHelveticaLight.ttf"); 
 		final ViewGroup mContainer = (ViewGroup)findViewById(android.R.id.content).getRootView();
@@ -70,7 +70,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
 		//setup view
 		initView();
         //get shared preferend card info login
-        ComplexPreferences pref = tgudApplication.getComplexPreference();
+        ComplexPreferences pref = TGUDApplication.getInstance().getComplexPreference();
         if(pref != null){
         	CardInfomation cardInfo = pref.getObject(CardInfomation.CARDINFORMATION, CardInfomation.class);
         	if(cardInfo != null && cardInfo.getResponseCode().equalsIgnoreCase("0")){
@@ -233,7 +233,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
 				if(cardInfo.getResponseCode().equalsIgnoreCase("0")){
 					Toast.makeText(LoginHomeActivity.this, R.string.login_success, Toast.LENGTH_SHORT).show();
 					// save info login into share preference
-					ComplexPreferences pref = tgudApplication.getComplexPreference();
+					ComplexPreferences pref = TGUDApplication.getInstance().getComplexPreference();
 					if(pref != null){
 						pref.putObject(CardInfomation.CARDINFORMATION, cardInfo);
 						pref.commit();

@@ -42,6 +42,11 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
+//		setContentView(R.layout.activity_promotion_place);
+//		if(arg0 == null){
+//			MainFragment main = new MainFragment();
+//			fm.beginTransaction().add(R.id.frameContent, main).commit();
+//		}
 		if(fm.findFragmentById(android.R.id.content) == null){
 			MainFragment main = new MainFragment();
 			fm.beginTransaction().add(android.R.id.content, main).commit();
@@ -50,28 +55,28 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 
 	public static class MainFragment extends SherlockFragment{
 
-		private final String TAG = "MainFragment";
-		private List<Place> staticListPlace = new ArrayList<Place>();
-		private List<Place> listFood;
-		private List<Place> listTravel;
-		private List<Place> listEntertainment;
-		private List<Place> listHealth;
-		private List<Place> listCoffeeScream;
-		private List<Place> listShopping;
-		private ProgressBar mProgressBar;
-		private HorizontalListView hlvFood;
-		private HorizontalListView hlvTravel;
-		private HorizontalListView hlvEntertainment;
-		private HorizontalListView hlvHealth;
-		private HorizontalListView hlvCoffeeScream;
-		private HorizontalListView hlvShopping;
-		private RelativeLayout rlFood;
-		private RelativeLayout rlTravel;
-		private RelativeLayout rlEntertainment;
-		private RelativeLayout rlHealth;
-		private RelativeLayout rlCoffeeScream;
-		private RelativeLayout rlShopping;
-		private Timer mTimer;
+		private final String 		TAG = "MainFragment";
+		private List<Place> 		staticListPlace = new ArrayList<Place>();
+		private List<Place> 		listFood;
+		private List<Place> 		listTravel;
+		private List<Place> 		listEntertainment;
+		private List<Place> 		listHealth;
+		private List<Place> 		listCoffeeScream;
+		private List<Place> 		listShopping;
+		private ProgressBar 		mProgressBar;
+		private HorizontalListView 	hlvFood;
+		private HorizontalListView 	hlvTravel;
+		private HorizontalListView 	hlvEntertainment;
+		private HorizontalListView 	hlvHealth;
+		private HorizontalListView 	hlvCoffeeScream;
+		private HorizontalListView 	hlvShopping;
+		private RelativeLayout 		rlFood;
+		private RelativeLayout 		rlTravel;
+		private RelativeLayout 		rlEntertainment;
+		private RelativeLayout 		rlHealth;
+		private RelativeLayout 		rlCoffeeScream;
+		private RelativeLayout 		rlShopping;
+		private Timer 				mTimer;
 		
 		
 		@Override
@@ -162,9 +167,8 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 			bundle.putSerializable("place_item", itemAdapter);
 			FragmentPlaceDetail fragPlaceDetail = new FragmentPlaceDetail();
 			fragPlaceDetail.setArguments(bundle);
-			FragmentManager fm = getFragmentManager();
-			FragmentTransaction fragTransaction1 = fm.beginTransaction();
-			fragTransaction1.add(android.R.id.content, fragPlaceDetail)
+			getFragmentManager().beginTransaction().replace(android.R.id.content, fragPlaceDetail)
+							.addToBackStack(null)
 							.commit();
 		}
 		

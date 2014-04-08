@@ -55,7 +55,7 @@ public class FragmentPlaceDetail extends SherlockFragment implements OnClickList
 		llUseCondition.setOnClickListener(this);
 		llViewFromWP = (LinearLayout)v.findViewById(R.id.llViewFromWP);
 		llViewFromWP.setOnClickListener(this);
-		Picasso.with(getActivity())
+		Picasso.with(getSherlockActivity())
 				.load(placeItem.getImage())
 				.fit()
 				.placeholder(R.drawable.empty_photo)
