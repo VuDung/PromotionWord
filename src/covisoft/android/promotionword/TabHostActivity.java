@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.widget.TabHost;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 import covisoft.android.promotionword.activity.ActivityBonusPoint;
 import covisoft.android.promotionword.activity.ActivityPromotionPlace;
@@ -58,6 +61,27 @@ public class TabHostActivity extends SherlockFragmentActivity{
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		MenuInflater inflater = getSupportMenuInflater();
+		inflater.inflate(R.menu.main, menu);
+		return true;
+	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch (item.getItemId()) {
+		case R.id.action_search:
+			
+			break;
+
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
+		
+	}
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		// TODO Auto-generated method stub

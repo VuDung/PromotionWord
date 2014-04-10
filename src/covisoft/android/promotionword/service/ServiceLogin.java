@@ -60,11 +60,12 @@ public class ServiceLogin {
 		try {
             JSONObject jObj = new JSONObject(stringJson);
             String responseCode = jObj.getString("responseCode");
+            String member_id = jObj.getString("member_id");
             String spentAmount = jObj.getString("spentAmount");
             String savedAmount = jObj.getString("savedAmount");
             String redeemedPoints = jObj.getString("redeemedPoints");
             String remainingPoints = jObj.getString("remainingPoints");
-            cardInfo = new CardInfomation(numberCardOrEmail, dateOfBirth, responseCode, spentAmount, savedAmount, redeemedPoints, remainingPoints);
+            cardInfo = new CardInfomation(numberCardOrEmail, dateOfBirth, responseCode, member_id, spentAmount, savedAmount, redeemedPoints, remainingPoints);
 		} catch (JSONException e) {
 			// TODO: handle exception
 			e.printStackTrace();

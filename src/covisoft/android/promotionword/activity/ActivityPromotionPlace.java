@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -42,11 +43,6 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
-//		setContentView(R.layout.activity_promotion_place);
-//		if(arg0 == null){
-//			MainFragment main = new MainFragment();
-//			fm.beginTransaction().add(R.id.frameContent, main).commit();
-//		}
 		if(fm.findFragmentById(android.R.id.content) == null){
 			MainFragment main = new MainFragment();
 			fm.beginTransaction().add(android.R.id.content, main).commit();
@@ -161,13 +157,16 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 		}
 		
 		private void exeItemOnHorizontalListView(AdapterView<?> parent, int position){
+			
 			Place itemAdapter;
 			itemAdapter = (Place)parent.getItemAtPosition(position);
 			Bundle bundle = new Bundle();
 			bundle.putSerializable("place_item", itemAdapter);
 			FragmentPlaceDetail fragPlaceDetail = new FragmentPlaceDetail();
 			fragPlaceDetail.setArguments(bundle);
-			getFragmentManager().beginTransaction().replace(android.R.id.content, fragPlaceDetail)
+//			((LinearLayout)findViewById(R.id.realtabcontent)).removeAllViews();
+			getFragmentManager().beginTransaction()
+							.add(R.id.realtabcontent, fragPlaceDetail)
 							.addToBackStack(null)
 							.commit();
 		}

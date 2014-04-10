@@ -7,6 +7,7 @@ public class CardInfomation implements Serializable {
 	private String cardNumberOrEmail;
 	private String dateOfBirth;
 	private String responseCode;
+	private String member_id;
 	private String spentAmount;
 	private String savedAmount;
 	private String redeemedPoints;
@@ -17,6 +18,19 @@ public class CardInfomation implements Serializable {
 			String savedAmount, String redeemedPoints, String remainingPoints) {
 		super();
 		this.responseCode = responseCode;
+		this.spentAmount = spentAmount;
+		this.savedAmount = savedAmount;
+		this.redeemedPoints = redeemedPoints;
+		this.remainingPoints = remainingPoints;
+	}
+	public CardInfomation(String cardNumberOrEmail, String dateOfBirth,
+			String responseCode, String member_id, String spentAmount,
+			String savedAmount, String redeemedPoints, String remainingPoints) {
+		super();
+		this.cardNumberOrEmail = cardNumberOrEmail;
+		this.dateOfBirth = dateOfBirth;
+		this.responseCode = responseCode;
+		this.member_id = member_id;
 		this.spentAmount = spentAmount;
 		this.savedAmount = savedAmount;
 		this.redeemedPoints = redeemedPoints;
