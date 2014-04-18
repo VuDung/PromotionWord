@@ -187,7 +187,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
 			
 			break;
 		case R.id.tvBreakLogin:
-			Intent iMainActivity = new Intent(LoginHomeActivity.this, MainActivity.class);
+			Intent iMainActivity = new Intent(LoginHomeActivity.this, TabBarWithCustomStack.class);
 			startActivity(iMainActivity);
 			break;
 		case R.id.btnCallHotline:
@@ -240,7 +240,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
 					}else{
 						Log.e(TAG, "Preference is null");
 					}
-					Intent iMainActivity = new Intent(LoginHomeActivity.this, TabHostActivity.class);
+					Intent iMainActivity = new Intent(LoginHomeActivity.this, TabBarWithCustomStack.class);
 					startActivity(iMainActivity);
 				}else{
 					// login fail

@@ -44,6 +44,7 @@
 	<string name="choose_city">Thành phố</string>
 	<string name="choose_district">Quận huyện</string>
 	<string name="please_choose_city">Bạn hãy chọn thành phố trước</string>
+	<string name="slogan_search">Bạn hãy nhập vào tên địa điểm bạn muốn tìm kiếm</string>
 	<!-- Take order activity -->
 	<string name="back">Quay lại</string>
 	<string name="take_picture">Chụp ảnh</string>

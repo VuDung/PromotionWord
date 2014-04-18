@@ -6,6 +6,8 @@ import android.support.v4.app.FragmentManager;
 import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
+import covisoft.android.promotionword.R;
+
 public class ActivitySendOder extends SherlockFragmentActivity {
 
 	FragmentManager fm = getSupportFragmentManager();
@@ -21,7 +23,8 @@ public class ActivitySendOder extends SherlockFragmentActivity {
 		
 		if(fm.findFragmentById(android.R.id.content) == null){
 			TakeOrderFragment orderFragment = new TakeOrderFragment();
-			fm.beginTransaction().add(android.R.id.content, orderFragment).commit();
+//			fm.beginTransaction().add(android.R.id.content, orderFragment).commit();
+			fm.beginTransaction().replace(R.id.realtabcontent, orderFragment).commit();
 		}
 	}
 

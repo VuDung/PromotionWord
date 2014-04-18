@@ -1,6 +1,7 @@
 package covisoft.android.promotionword;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TabHost;
 
@@ -12,6 +13,8 @@ import com.actionbarsherlock.view.MenuItem;
 import covisoft.android.promotionword.activity.ActivityBonusPoint;
 import covisoft.android.promotionword.activity.ActivityPromotionPlace;
 import covisoft.android.promotionword.activity.ActivitySendOder;
+import covisoft.android.promotionword.nearby.ActivityNearby;
+import covisoft.android.promotionword.search.ActivitySearch;
 import covisoft.android.promotionword.tabhost.TabManager;
 
 public class TabHostActivity extends SherlockFragmentActivity{
@@ -73,9 +76,13 @@ public class TabHostActivity extends SherlockFragmentActivity{
 		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
 		case R.id.action_search:
-			
+			Intent iSearch = new Intent(TabHostActivity.this, ActivitySearch.class);
+			startActivity(iSearch);
 			break;
-
+		case R.id.action_nearby:
+			Intent iNearby = new Intent(TabHostActivity.this, ActivityNearby.class);
+			startActivity(iNearby);
+			break;
 		default:
 			break;
 		}

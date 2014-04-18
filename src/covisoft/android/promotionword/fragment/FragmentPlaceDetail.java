@@ -1,6 +1,8 @@
 package covisoft.android.promotionword.fragment;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,12 +35,20 @@ public class FragmentPlaceDetail extends SherlockFragment implements OnClickList
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		placeItem = (Place) getArguments().getSerializable("place_item");
+	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		View v = inflater.inflate(R.layout.fragment_place_detail, container, false);
-		placeItem = (Place) getArguments().getSerializable("place_item");
+		
 		Log.d("name place fragment detail place", placeItem.getName());
 		imgPlaceDetail = (ImageView)v.findViewById(R.id.imgPlaceDetail);
 		tvNamePlaceDetail = (TextView)v.findViewById(R.id.tvNamePlaceDetail);

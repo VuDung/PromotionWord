@@ -29,6 +29,10 @@
         </activity>
         
         <activity 
+            android:name="covisoft.android.promotionword.TabBarWithCustomStack"
+            ></activity>
+        
+        <activity 
             android:name="covisoft.android.promotionword.TabHostActivity"
             android:theme="@style/Theme.Sherlock.Light"></activity>
         
@@ -45,6 +49,12 @@
             android:theme="@style/Theme.Sherlock.Light"></activity>
         <activity 
             android:name="covisoft.android.promotionword.activity.ActivityBonusPoint"
+            android:theme="@style/Theme.Sherlock.Light"></activity>
+        <activity 
+            android:name="covisoft.android.promotionword.search.ActivitySearch"
+            android:theme="@style/Theme.Sherlock.Light"></activity>
+        <activity 
+            android:name="covisoft.android.promotionword.nearby.ActivityNearby"
             android:theme="@style/Theme.Sherlock.Light"></activity>
     </application>
 

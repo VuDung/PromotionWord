@@ -8,13 +8,11 @@ import java.util.Timer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -40,12 +38,26 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 	}
 	
 	@Override
+	protected void onPostResume() {
+		// TODO Auto-generated method stub
+		super.onPostResume();
+		MainFragment fragMain = new MainFragment();
+		fm.beginTransaction()
+			.replace(R.id.realtabcontent, fragMain).commit();
+	}
+	
+	public void exeMainFragment(){
+		
+	}
+
+	@Override
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
 		if(fm.findFragmentById(android.R.id.content) == null){
 			MainFragment main = new MainFragment();
-			fm.beginTransaction().add(android.R.id.content, main).commit();
+//			fm.beginTransaction().add(android.R.id.content, main).commit();
+			fm.beginTransaction().replace(R.id.realtabcontent, main).commit();
 		}
 	}
 
@@ -164,10 +176,14 @@ public class ActivityPromotionPlace extends SherlockFragmentActivity {
 			bundle.putSerializable("place_item", itemAdapter);
 			FragmentPlaceDetail fragPlaceDetail = new FragmentPlaceDetail();
 			fragPlaceDetail.setArguments(bundle);
+			
+			ActivityPromotionPlace activity = (ActivityPromotionPlace)getActivity();
+//			activity.
 //			((LinearLayout)findViewById(R.id.realtabcontent)).removeAllViews();
-			getFragmentManager().beginTransaction()
+			getFragmentManager()
+							.beginTransaction()
 							.add(R.id.realtabcontent, fragPlaceDetail)
-							.addToBackStack(null)
+//							.addToBackStack(null)
 							.commit();
 		}
 		

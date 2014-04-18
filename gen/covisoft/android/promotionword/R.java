@@ -16,6 +16,10 @@ public final class R {
         public static final int show_down=0x7f040004;
         public static final int show_left=0x7f040005;
         public static final int show_up=0x7f040006;
+        public static final int slide_in_left=0x7f040007;
+        public static final int slide_in_right=0x7f040008;
+        public static final int slide_out_left=0x7f040009;
+        public static final int slide_out_right=0x7f04000a;
     }
     public static final class array {
         public static final int cityName=0x7f0c0000;
@@ -998,8 +1002,10 @@ containing a value of this type.
         public static final int logo=0x7f02007e;
         public static final int next32=0x7f02007f;
         public static final int print48=0x7f020080;
-        public static final int star48=0x7f020081;
-        public static final int zoom_in48=0x7f020082;
+        public static final int search32=0x7f020081;
+        public static final int search48=0x7f020082;
+        public static final int star48=0x7f020083;
+        public static final int zoom_in48=0x7f020084;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050020;
@@ -1041,76 +1047,81 @@ containing a value of this type.
         public static final int abs__textButton=0x7f050013;
         public static final int abs__title=0x7f05001b;
         public static final int abs__up=0x7f05000b;
-        public static final int action_settings=0x7f05006d;
+        public static final int action_nearby=0x7f050072;
+        public static final int action_search=0x7f050071;
         public static final int btnCallHotline=0x7f050038;
         public static final int btnLogin=0x7f050036;
         public static final int disableHome=0x7f050009;
         public static final int edit_query=0x7f050026;
         public static final int frameContent=0x7f05003b;
-        public static final int hlvCoffeScream=0x7f050044;
-        public static final int hlvEntertainment=0x7f050050;
-        public static final int hlvFood=0x7f050040;
-        public static final int hlvHealth=0x7f05004c;
-        public static final int hlvShopping=0x7f050048;
-        public static final int hlvTravel=0x7f050054;
+        public static final int hlvCoffeScream=0x7f050048;
+        public static final int hlvEntertainment=0x7f050054;
+        public static final int hlvFood=0x7f050044;
+        public static final int hlvHealth=0x7f050050;
+        public static final int hlvShopping=0x7f05004c;
+        public static final int hlvTravel=0x7f050058;
         public static final int homeAsUp=0x7f050006;
-        public static final int imgCall=0x7f05005c;
-        public static final int imgLocation=0x7f050059;
-        public static final int imgPlace=0x7f050067;
-        public static final int imgPlaceDetail=0x7f050056;
-        public static final int imgStar=0x7f05005e;
-        public static final int imgTab=0x7f05006c;
-        public static final int imgUseCondition=0x7f050062;
-        public static final int imgViewFromWP=0x7f050065;
+        public static final int imgCall=0x7f050060;
+        public static final int imgLocation=0x7f05005d;
+        public static final int imgPlace=0x7f05006b;
+        public static final int imgPlaceDetail=0x7f05005a;
+        public static final int imgStar=0x7f050062;
+        public static final int imgTab=0x7f050070;
+        public static final int imgUseCondition=0x7f050066;
+        public static final int imgViewFromWP=0x7f050069;
         public static final int listMode=0x7f050002;
-        public static final int llAddressPlaceDetail=0x7f050058;
-        public static final int llCallPlaceDetail=0x7f05005b;
-        public static final int llClickEntry=0x7f050060;
+        public static final int llAddressPlaceDetail=0x7f05005c;
+        public static final int llCallPlaceDetail=0x7f05005f;
+        public static final int llClickEntry=0x7f050064;
         public static final int llLoginForm=0x7f050033;
         public static final int llLogo=0x7f050032;
-        public static final int llUseCondition=0x7f050061;
-        public static final int llViewFromWP=0x7f050064;
+        public static final int llUseCondition=0x7f050065;
+        public static final int llViewFromWP=0x7f050068;
+        public static final int lvPlaceSearch=0x7f05003f;
         public static final int mPager=0x7f05003a;
-        public static final int mProgressBar=0x7f050055;
+        public static final int mProgressBar=0x7f050059;
         public static final int normal=0x7f050001;
-        public static final int pagerBanner=0x7f05003c;
+        public static final int pagerBanner=0x7f050040;
         public static final int pbLogin=0x7f050039;
         public static final int realtabcontent=0x01010000;
-        public static final int rlCoffeeScream=0x7f050041;
-        public static final int rlEntertainment=0x7f05004d;
-        public static final int rlFood=0x7f05003d;
-        public static final int rlHealth=0x7f050049;
-        public static final int rlShopping=0x7f050045;
-        public static final int rlTravel=0x7f050051;
+        public static final int rlCoffeeScream=0x7f050045;
+        public static final int rlEntertainment=0x7f050051;
+        public static final int rlFood=0x7f050041;
+        public static final int rlHealth=0x7f05004d;
+        public static final int rlShopping=0x7f050049;
+        public static final int rlTravel=0x7f050055;
         public static final int showCustom=0x7f050008;
         public static final int showHome=0x7f050005;
         public static final int showTitle=0x7f050007;
         public static final int tabMode=0x7f050003;
-        public static final int tvAddressPlace=0x7f05006a;
-        public static final int tvAddressPlaceDetail=0x7f05005a;
+        public static final int tvAddressPlace=0x7f05006e;
+        public static final int tvAddressPlaceDetail=0x7f05005e;
         public static final int tvBreakLogin=0x7f050037;
-        public static final int tvCoffeScream=0x7f050042;
-        public static final int tvEntertainment=0x7f05004e;
-        public static final int tvFood=0x7f05003e;
-        public static final int tvHealth=0x7f05004a;
-        public static final int tvNamePlace=0x7f050069;
-        public static final int tvNamePlaceDetail=0x7f050057;
-        public static final int tvPromotionPercent=0x7f050068;
-        public static final int tvPromotionPercentPlaceDetail=0x7f05005f;
-        public static final int tvShopping=0x7f050046;
-        public static final int tvTelPlaceDetail=0x7f05005d;
-        public static final int tvTitleTab=0x7f05006b;
-        public static final int tvTravel=0x7f050052;
-        public static final int tvUseCondition=0x7f050063;
-        public static final int tvViewFromWP=0x7f050066;
-        public static final int tvViewmoreCoffeeScream=0x7f050043;
-        public static final int tvViewmoreEntertainment=0x7f05004f;
-        public static final int tvViewmoreFood=0x7f05003f;
-        public static final int tvViewmoreHealth=0x7f05004b;
-        public static final int tvViewmoreShopping=0x7f050047;
-        public static final int tvViewmoreTravel=0x7f050053;
+        public static final int tvCoffeScream=0x7f050046;
+        public static final int tvEntertainment=0x7f050052;
+        public static final int tvFood=0x7f050042;
+        public static final int tvHealth=0x7f05004e;
+        public static final int tvNamePlace=0x7f05006d;
+        public static final int tvNamePlaceDetail=0x7f05005b;
+        public static final int tvPromotionPercent=0x7f05006c;
+        public static final int tvPromotionPercentPlaceDetail=0x7f050063;
+        public static final int tvShopping=0x7f05004a;
+        public static final int tvTelPlaceDetail=0x7f050061;
+        public static final int tvTitleTab=0x7f05006f;
+        public static final int tvTravel=0x7f050056;
+        public static final int tvUseCondition=0x7f050067;
+        public static final int tvViewFromWP=0x7f05006a;
+        public static final int tvViewmoreCoffeeScream=0x7f050047;
+        public static final int tvViewmoreEntertainment=0x7f050053;
+        public static final int tvViewmoreFood=0x7f050043;
+        public static final int tvViewmoreHealth=0x7f05004f;
+        public static final int tvViewmoreShopping=0x7f05004b;
+        public static final int tvViewmoreTravel=0x7f050057;
+        public static final int txtCitySearch=0x7f05003d;
         public static final int txtDateOfBirth=0x7f050035;
+        public static final int txtDistrictSearch=0x7f05003e;
         public static final int txtNumberCardEmail=0x7f050034;
+        public static final int txtSearch=0x7f05003c;
         public static final int useLogo=0x7f050004;
         public static final int wrap_content=0x7f050000;
     }
@@ -1141,14 +1152,16 @@ containing a value of this type.
         public static final int abs__simple_dropdown_hint=0x7f030014;
         public static final int activity_login_home=0x7f030015;
         public static final int activity_main=0x7f030016;
-        public static final int activity_promotion_place=0x7f030017;
-        public static final int activity_tabhost=0x7f030018;
-        public static final int fragment_main=0x7f030019;
-        public static final int fragment_place_detail=0x7f03001a;
-        public static final int horizontal_listplace_item=0x7f03001b;
-        public static final int sherlock_spinner_dropdown_item=0x7f03001c;
-        public static final int sherlock_spinner_item=0x7f03001d;
-        public static final int tab_indicator=0x7f03001e;
+        public static final int activity_nearby=0x7f030017;
+        public static final int activity_promotion_place=0x7f030018;
+        public static final int activity_search=0x7f030019;
+        public static final int activity_tabhost=0x7f03001a;
+        public static final int fragment_main=0x7f03001b;
+        public static final int fragment_place_detail=0x7f03001c;
+        public static final int horizontal_listplace_item=0x7f03001d;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001e;
+        public static final int sherlock_spinner_item=0x7f03001f;
+        public static final int tab_indicator=0x7f030020;
     }
     public static final class menu {
         public static final int main=0x7f0d0000;
@@ -1198,7 +1211,7 @@ containing a value of this type.
         public static final int app_name=0x7f0a000d;
         /**  Take order activity 
          */
-        public static final int back=0x7f0a0034;
+        public static final int back=0x7f0a0035;
         public static final int break_login=0x7f0a0025;
         public static final int call_hotline=0x7f0a001d;
         public static final int cant_login=0x7f0a001b;
@@ -1209,13 +1222,13 @@ containing a value of this type.
         public static final int coffee_scream=0x7f0a002a;
         public static final int date_of_birth=0x7f0a0019;
         public static final int do_u_want_call=0x7f0a001e;
-        public static final int do_u_want_call_them=0x7f0a003d;
+        public static final int do_u_want_call_them=0x7f0a003e;
         public static final int dont_have_card=0x7f0a001c;
         /**  Search 
          */
         public static final int edittext_hint_search=0x7f0a0030;
         public static final int entertainment=0x7f0a0028;
-        public static final int find_nearby=0x7f0a003f;
+        public static final int find_nearby=0x7f0a0040;
         /**  Main Layout 
          */
         public static final int food=0x7f0a0026;
@@ -1231,36 +1244,37 @@ containing a value of this type.
         public static final int mark_charge=0x7f0a002f;
         public static final int near_by=0x7f0a0014;
         public static final int no=0x7f0a0020;
-        public static final int not_connect=0x7f0a0044;
+        public static final int not_connect=0x7f0a0045;
         /**  Login Home 
          */
         public static final int number_card_email=0x7f0a0018;
         public static final int place_detail=0x7f0a0015;
         public static final int please_choose_city=0x7f0a0033;
-        public static final int please_take_photo_build=0x7f0a0038;
+        public static final int please_take_photo_build=0x7f0a0039;
         public static final int preference_file_key=0x7f0a0010;
         public static final int promotion_place=0x7f0a002d;
-        public static final int promotions_places_nearby_this_place=0x7f0a003e;
-        public static final int redeemed=0x7f0a0043;
-        public static final int remaining=0x7f0a0042;
+        public static final int promotions_places_nearby_this_place=0x7f0a003f;
+        public static final int redeemed=0x7f0a0044;
+        public static final int remaining=0x7f0a0043;
         /**  Fragment Place detail 
          */
-        public static final int sale=0x7f0a0039;
-        public static final int saved_amount=0x7f0a0041;
+        public static final int sale=0x7f0a003a;
+        public static final int saved_amount=0x7f0a0042;
         public static final int search=0x7f0a0012;
         public static final int send_order=0x7f0a002e;
         public static final int setting=0x7f0a0016;
         public static final int shopping=0x7f0a0027;
+        public static final int slogan_search=0x7f0a0034;
         /**  Check charge 
          */
-        public static final int spent_amount=0x7f0a0040;
-        public static final int take_picture=0x7f0a0035;
-        public static final int toast_error_camera_preview=0x7f0a0036;
-        public static final int toast_error_save_picture=0x7f0a0037;
+        public static final int spent_amount=0x7f0a0041;
+        public static final int take_picture=0x7f0a0036;
+        public static final int toast_error_camera_preview=0x7f0a0037;
+        public static final int toast_error_save_picture=0x7f0a0038;
         public static final int travel=0x7f0a0029;
-        public static final int use_condition=0x7f0a003c;
-        public static final int view_entry=0x7f0a003a;
-        public static final int view_from_wordpromotion=0x7f0a003b;
+        public static final int use_condition=0x7f0a003d;
+        public static final int view_entry=0x7f0a003b;
+        public static final int view_from_wordpromotion=0x7f0a003c;
         public static final int view_more=0x7f0a002c;
         public static final int yes=0x7f0a001f;
     }
