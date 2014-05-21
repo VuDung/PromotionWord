@@ -7,9 +7,11 @@ import com.google.gson.reflect.TypeToken;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Log;
 
 
 public class ComplexPreferences {
+	private static String 					TAG				= "ComplexPreferences";
     private static ComplexPreferences       complexPreferences;
     private final Context                   context;
     private final SharedPreferences         preferences;
@@ -22,6 +24,7 @@ private ComplexPreferences(Context context, String namePreferences, int mode) {
     this.context = context;
     if (namePreferences == null || namePreferences.equals("")) {
         namePreferences = "TGUDPreferenceKey";
+        Log.i(TAG, "Preference Created.");
     }
     preferences = context.getSharedPreferences(namePreferences, mode);
     editor = preferences.edit();

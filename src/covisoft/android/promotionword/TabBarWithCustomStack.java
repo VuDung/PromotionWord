@@ -4,13 +4,19 @@ import java.util.HashMap;
 import java.util.Stack;
 
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
+import covisoft.android.promotionword.activity.ActivityNearby;
+import covisoft.android.promotionword.activity.ActivitySearch;
 import covisoft.android.promotionword.fragment.FragmentBonusPoint;
 import covisoft.android.promotionword.fragment.FragmentMain;
 import covisoft.android.promotionword.fragment.FragmentSendOrder;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -31,10 +37,12 @@ public class TabBarWithCustomStack extends SherlockFragmentActivity {
 	private static Stack<Fragment> sendOrderStack;
 	private static Stack<Fragment> bonusPointStack;
 	
+	
 	//Stack final names
 	private static final String STACK_PLACE = "place";
 	private static final String STACK_ORDER = "order";
 	private static final String STACK_BONUS = "bonus";
+	
 	
 	//Tab string for onSaveInstanceState method
 	private static final String INSTANCE_STATE_TAB = "tab";
@@ -48,8 +56,6 @@ public class TabBarWithCustomStack extends SherlockFragmentActivity {
 	private FragmentTransaction transaction;
 	
 	private Context mContext;
-	
-	
 	
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -68,10 +74,14 @@ public class TabBarWithCustomStack extends SherlockFragmentActivity {
 		sendOrderStack = new Stack<Fragment>();
 		bonusPointStack = new Stack<Fragment>();
 		
+		
+		
 		// put stack to custom back stack
 		customBackStack.put(STACK_PLACE, promotionPlaceStack);
 		customBackStack.put(STACK_ORDER, sendOrderStack);
 		customBackStack.put(STACK_BONUS, bonusPointStack);
+		
+		
 		
 		customBackStack.get(STACK_PLACE).push(new FragmentMain());
 		customBackStack.get(STACK_ORDER).push(new FragmentSendOrder());
@@ -102,6 +112,46 @@ public class TabBarWithCustomStack extends SherlockFragmentActivity {
 		}else{
 			mTabHost.setCurrentTabByTag(STACK_PLACE);
 		}
+	}
+	
+	
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		// TODO Auto-generated method stub
+		super.onSaveInstanceState(outState);
+		outState.putString(INSTANCE_STATE_TAB, mTabHost.getCurrentTabTag());
+	}
+
+
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// TODO Auto-generated method stub
+		MenuInflater inflater = getSupportMenuInflater();
+		inflater.inflate(R.menu.main, menu);
+		return true;
+	}
+
+
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		
+		switch (item.getItemId()) {
+		case R.id.action_search:
+			Intent iSearch = new Intent(this, ActivitySearch.class);
+			startActivity(iSearch);
+			break;
+		case R.id.action_nearby:
+			Intent iNearby = new Intent(this, ActivityNearby.class);
+			startActivity(iNearby);
+			break;
+		default:
+			break;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 
 
@@ -264,4 +314,5 @@ public class TabBarWithCustomStack extends SherlockFragmentActivity {
 		}
 
 	}
+
 }

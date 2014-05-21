@@ -2,10 +2,10 @@
 
 	<item 
 	    android:id="@+id/action_search"
-	   	android:icon="@drawable/search48"
+	   	android:icon="@drawable/search32"
 	    android:showAsAction="ifRoom"/>
 	<item 
 	    android:id="@+id/action_nearby"
-	    android:icon="@drawable/location48"
+	    android:icon="@drawable/location32"
 	    android:showAsAction="ifRoom"/>
 </menu>

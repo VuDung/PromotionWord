@@ -18,34 +18,35 @@ import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
 import covisoft.android.promotionword.model.Place;
-import covisoft.android.promotionword.utils.Config;
+import covisoft.android.promotionword.utils.API;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 
 public class ServicePlace {
 
 	private List<Place> listPlace;
 	private Gson gson = new Gson();
-	private Activity mActivity;
+	private Context mContext;
 	private InputStream is = null;
 	private String json = "";
-	private String URL;
+	private String mUrl;
 	
-	public ServicePlace(Activity activity) {
+	public ServicePlace(Context context, String Url) {
 		// TODO Auto-generated constructor stub
-		this.mActivity = activity;
+		this.mContext = context;
+		this.mUrl = Url;
 	}
 	
 	public List<Place> start() throws IOException{
-		URL = Config.urlList;
 		try {
             DefaultHttpClient httpClient = new DefaultHttpClient();
             // post
 //            HttpPost httpPost = new HttpPost(URL);
             // get
-            Log.d("GetListPlace ===> URL", URL);
-            HttpUriRequest httpGet = new HttpGet(URL);
+            Log.d("GetListPlace ===> URL", mUrl);
+            HttpUriRequest httpGet = new HttpGet(mUrl);
             HttpResponse httpResponse = httpClient.execute(httpGet);
             HttpEntity httpEntity = httpResponse.getEntity();
             is = httpEntity.getContent();  

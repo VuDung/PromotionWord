@@ -19,7 +19,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import covisoft.android.promotionword.banner.Banner;
-import covisoft.android.promotionword.utils.Config;
+import covisoft.android.promotionword.utils.API;
 
 import android.app.Activity;
 import android.util.Log;
@@ -40,7 +40,7 @@ public class ServiceBanner {
 	
 	public List<Banner> start(){
 		listBanner = new ArrayList<Banner>();
-		Url = Config.requestGetBanner;
+		Url = API.requestGetBanner;
 		Log.i(TAG, Url);
 		try {
             DefaultHttpClient httpClient = new DefaultHttpClient();

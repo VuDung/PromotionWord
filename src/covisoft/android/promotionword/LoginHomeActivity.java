@@ -66,7 +66,7 @@ public class LoginHomeActivity extends SherlockActivity implements OnClickListen
         // set font type for this activity
         final Typeface mFont = Typeface.createFromAsset(mActivity.getAssets(), "SFUHelveticaLight.ttf"); 
 		final ViewGroup mContainer = (ViewGroup)findViewById(android.R.id.content).getRootView();
-		Util.setAppFont(mContainer, mFont);
+		Util.setAppFont(mActivity, mContainer);
 		//setup view
 		initView();
         //get shared preferend card info login
